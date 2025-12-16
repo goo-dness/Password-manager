@@ -6,8 +6,11 @@ def write_key():
 master_pwd =input("What is the master password?: ")
 key = load_key() + master_pwd.encode()            fer = Fernet(key)
 
-def load_key():                                       file = open("key.key", "rb")                      key = diles.read()
-    file.close()                                      return key
+def load_key():                                                       
+  file = open("key.key", "rb")                                        
+  key = files.read()
+    file.close()                                         
+  return key
 
 def view_password():
     with open('password.txt', 'r') as f:
@@ -23,13 +26,8 @@ def add_password():
 e()).decode() +"\n"))
 
 
-
-
-
 while True:
-    mode = input("Do you want to add a new passwor
-d or view an existing one or quit? (add/view/q): "
-)
+    mode = input("Do you want to add a new password or view an existing one or quit? (add/view/q): ")
     if mode == "q":
        break
     elif mode == "view":
@@ -37,4 +35,3 @@ d or view an existing one or quit? (add/view/q): "
         add()
     else:
         print("Invalid input")
-password_manager.py             40
